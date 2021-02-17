@@ -12,7 +12,6 @@
               ref="form"
               v-model="form"
               class="pa-4 pt-6"
-              lazy-validation
           >
             <v-text-field
                 v-model="password"
@@ -92,7 +91,6 @@ export default {
           email: this.email,
           password: this.password
         }
-        console.log(user)
         this.$refs.form.reset();
       }
     }
