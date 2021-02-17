@@ -49,7 +49,7 @@
               depressed
               @click="onSubmit"
             >
-              Submit
+              Login
             </v-btn>
           </v-card-actions>
         </v-card>
