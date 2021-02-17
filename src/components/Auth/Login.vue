@@ -47,6 +47,7 @@
               class="white--text"
               color="blue"
               depressed
+              @click="onSubmit"
             >
               Submit
             </v-btn>
@@ -71,7 +72,19 @@ export default {
           'Password must contain an upper case letter, a numeric character, and a special character',
       required: v => !!v || 'This field is required'
     }
-  })
+  }),
+  methods: {
+    onSubmit() {
+      if (this.$refs.form.validate()) {
+        const user = {
+          email: this.email,
+          password: this.password
+        }
+        console.log(user)
+        this.$refs.form.reset();
+      }
+    }
+  }
 }
 </script>
 
